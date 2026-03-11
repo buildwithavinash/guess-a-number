@@ -89,13 +89,13 @@ const App = () => {
         <h1 className="text-red-600 font-semibold text-3xl lg:text-6xl mb-4">Guess-A-Number</h1>
 
         <div className="flex items-center justify-center gap-4 *:border border-slate-200 *:p-2 *:cursor-pointer *:rounded-2xl mb-2">
-          <button onClick={()=> changeLevel("easy")} className="bg-green-700 text-slate-200 font-semibold">Easy (1-20)</button>
+          <button onClick={()=> changeLevel("easy")} className="bg-green-700 text-slate-200 font-semibold">Easy</button>
           <button onClick={()=> changeLevel("medium")} className="bg-blue-700 text-slate-200 font-semibold">
-            Medium (1-50)
+            Medium
           </button>
-          <button onClick={()=> changeLevel("hard")} className="bg-red-700 text-slate-200 font-semibold">Hard (1-100)</button>
+          <button onClick={()=> changeLevel("hard")} className="bg-red-700 text-slate-200 font-semibold">Hard</button>
         </div>
-        <p className="text-slate-700">Guess a number between {levelText}</p>
+        <p className="text-slate-700">Guess a number between <span className="font-bold">{levelText}</span></p>
       </div>
 
       <div className="flex gap-3">
@@ -124,7 +124,7 @@ const App = () => {
         ) : (
           <p>You have {userTurn} chances left</p>
         )}
-        <button onClick={() => restartGame()}>Restart</button>
+        <button onClick={() => restartGame()} className="border border-slate-500 px-4 py-1 rounded-2xl bg-red-500 text-slate-900 font-semibold">Restart</button>
       </div>
     </div>
     </div>
