@@ -120,7 +120,7 @@ const App = () => {
       <div className="flex flex-col items-center justify-center gap-4">
         <p>{message}</p>
         {userTurn === 0 ? (
-          <p>You have used all your chances, Click restart to play again</p>
+          <p className="text-center">You have used all your chances, <br /> Click restart to play again</p>
         ) : (
           <p>You have {userTurn} chances left</p>
         )}
